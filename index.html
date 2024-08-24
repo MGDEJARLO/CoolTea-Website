@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COOLTEA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          class="logo"
+          src="images/cooltea-logo-icon.png"
+          alt="cooltea logo"
+        />
+
+        <div class="hamburger">☰</div>
+        <!-- Hamburger icon -->
+
+        <ul class="nav-links">
+          <li><a href="#" class="active">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">PRODUCTS</a></li>
+          <li><a href="#">STORE</a></li>
+          <li><a href="#">CONTACTS</a></li>
+        </ul>
+
+        <div class="social-links">
+          <a href="#"
+            ><img
+              src="images/insta-icon.png"
+              alt="instagram-icon"
+              height="20px"
+          /></a>
+          <a href="#"
+            ><img
+              src="images/twitter-icon.png"
+              alt="twitter-icon"
+              height="20px"
+          /></a>
+          <a href="#"
+            ><img src="images/fb-icon.png" alt="fb-icon" height="20px"
+          /></a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero-section-container">
+      <div class="hero-section-details">
+        <h1 class="hero-section-title">BUBBLE TEA</h1>
+        <p class="hero-descrip">
+          Also known as pearl milktea, bubble milktea or boba
+        </p>
+        <p class="hero-descrip">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+          quisquam excepturi laborum molestiae quasi aut perspiciatis beatae sit
+          natus! Nostrum quae dolorem illo velit blanditiis voluptates modi
+          dicta incidunt architecto?
+        </p>
+        <button type="button" class="btn hero-section-btn">BUY NOW!</button>
+      </div>
+      <img class="hero-image" src="images/hero-image.jpg" alt="hero-image" />
+    </section>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      const socialLinks = document.querySelector(".social-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        socialLinks.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

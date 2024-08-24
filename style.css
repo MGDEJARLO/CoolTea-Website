@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #a2e4f4;
+}
+
+li,
+a,
+button {
+  font-family: Creepster;
+  font-weight: 500;
+  font-size: 30px;
+  color: #489ab0;
+  text-decoration: none;
+}
+
+header {
+  padding: 30px 10%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1080px;
+  position: relative; /* Needed for positioning the menu */
+}
+
+.logo {
+  cursor: pointer;
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adding space between the links */
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #2129ae;
+  border-bottom: 2px solid #2129ae;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  padding-right: 15px; /* Adding space between social media icons */
+}
+
+.social-links img:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Hide Hamburger Menu on Larger Screens */
+.hamburger {
+  display: none;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 1025px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links,
+  .social-links {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    right: 0;
+    background-color: #fff; /* Background color for dropdown */
+    padding: 10px;
+    border-radius: 5px; /* Optional: for rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for dropdown */
+  }
+
+  .nav-links.show,
+  .social-links.show {
+    display: flex; /* Show on hamburger menu click */
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block; /* Display only on small screens */
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  .social-links {
+    margin-top: 10px; /* Space between nav links and social links */
+  }
+}
+
+/* Hero Section Styles */
+.hero-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #a2e4f4;
+  max-width: 1080px;
+  font-family: Creepster;
+}
+
+.hero-section-details {
+  flex: 1;
+  padding-right: 20px;
+  padding-left: 10%;
+  /* Space between text and image */
+}
+
+.hero-section-title {
+  font-size: 48px;
+  color: #2129ae;
+  margin-bottom: 20px;
+}
+
+.hero-descrip {
+  font-size: 16px;
+  color: #489ab0;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.hero-section-btn {
+  padding: 10px 20px;
+  font-size: 40px;
+  color: #a2e4f4;
+  background-color: #2129ae;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.6); /* Bottom-left shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+.hero-section-btn:hover {
+  box-shadow: -6px 6px 12px rgba(0, 0, 0, 0.8); /* Increase shadow on hover */
+}
+.hero-image {
+  flex: 1;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px; /* Optional: to give the image rounded corners */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1025px) {
+  .hero-section-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-section-details {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+    width: 80%; /* Adjust image size on smaller screens */
+  }
+}
